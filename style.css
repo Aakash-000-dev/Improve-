@@ -1,0 +1,1124 @@
+/* =========================================== 
+   Routine Tracker 
+   style.css 
+   Part 1 
+=========================================== */ 
+ 
+*{ 
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+    font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif; 
+} 
+ 
+body{ 
+ 
+    background:#232324; 
+ 
+    color:#ffffff; 
+ 
+    height:100vh; 
+ 
+    display:flex; 
+ 
+    flex-direction:column; 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Header 
+=============================== */ 
+ 
+header{ 
+ 
+    height:70px; 
+ 
+    background:#14141400;
+    
+    border-radius: 5px;
+
+    margin-top: 1px;
+
+    margin-bottom: 1px;
+
+    margin-left: 1px;
+
+    margin-right: 1px;
+
+    border: 1px solid #464545;
+ 
+    color:#ffffff; 
+ 
+    display:flex; 
+ 
+    align-items:center; 
+ 
+    justify-content:space-between; 
+ 
+    padding:0 30px; 
+ 
+    box-shadow:0 2px 8px rgba(0,0,0,.15); 
+ 
+} 
+.logo{
+    width: 60px;
+    height: 60px;
+
+}
+ 
+.logo{ 
+ 
+    font-size:40px; 
+    font-style: bold;
+    text-spacing-trim: space-all ;
+    font-weight:bolder;
+    
+ 
+} 
+ 
+#todayDate{ 
+ 
+    font-size:16px; 
+ 
+    opacity:.9; 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Main Layout 
+=============================== */ 
+ 
+.container{ 
+ 
+    flex:1; 
+ 
+    display:flex; 
+ 
+    overflow:hidden; 
+    
+ 
+} 
+ 
+ 
+/* =============================== 
+   Sidebar 
+=============================== */ 
+ 
+.sidebar{ 
+ 
+    width:340px;
+    
+    margin-top: 1px;
+
+    margin-right: 1px;
+
+    margin-bottom: 1px;
+
+    margin-left: 1px;
+
+    border-radius: 5px;
+ 
+    background:#252525; 
+ 
+    border: 1px solid #464545; 
+ 
+    padding:20px; 
+ 
+    overflow-y:auto; 
+ 
+} 
+
+.sidebar2{
+    width:65px;
+
+    background: #252525;
+
+    border-radius: 5px;
+
+    padding: 2px;
+
+    margin-top: 1px;
+
+    margin-right: 1px;
+
+    margin-bottom: 1px;
+
+    margin-left: 1px;
+
+    border: 1px solid #464545;
+ 
+    overflow-y: auto;
+    transition: 0.8s;
+}
+ 
+/* =============================== 
+   Main Content 
+=============================== */ 
+ 
+main{ 
+ 
+    flex:1; 
+ 
+    overflow-y:auto; 
+ 
+    padding:25px; 
+
+    background:#252525;
+ 
+} 
+
+.main-page{
+    margin-top: 1px;
+
+    margin-right: 1px;
+
+    margin-bottom: 1px;
+
+    margin-left: 1px;
+
+    border-radius: 5px;
+
+    border: 1px solid #464545;
+ 
+}
+#about{
+    margin-top: 1px;
+
+    margin-right: 1px;
+
+    margin-bottom: 1px;
+
+    margin-left: 1px;
+
+    border-radius: 5px;
+
+    border: 1px solid #464545;
+ 
+}
+.h7{
+    font-size: large;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+ 
+/* =============================== 
+   Cards 
+=============================== */ 
+ 
+.card{ 
+ 
+    background:#2c2c2c; 
+ 
+    border-radius:12px; 
+ 
+    padding:20px; 
+ 
+    margin-bottom:20px; 
+ 
+    box-shadow:0 4px 12px rgba(0,0,0,.08); 
+ 
+} 
+ 
+.cardTitle{ 
+ 
+    display:flex; 
+ 
+    justify-content:space-between; 
+ 
+    align-items:center; 
+ 
+    margin-bottom:15px; 
+ 
+} 
+ 
+.cardTitle h2{ 
+ 
+    font-size:22px; 
+ 
+    color:#c1c2c4; 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Buttons 
+=============================== */ 
+ 
+button{ 
+ 
+    background:#181818; 
+ 
+    color:white; 
+ 
+    border:none; 
+ 
+    border-radius:8px; 
+ 
+    padding:10px 18px; 
+ 
+    cursor:pointer; 
+ 
+    transition:.25s; 
+ 
+    font-size:15px; 
+ 
+} 
+ 
+button:hover{ 
+ 
+    background:#575757; 
+ 
+} 
+ 
+button:active{ 
+ 
+    transform:scale(.96); 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Utility 
+=============================== */ 
+ 
+.hidden{ 
+ 
+    display:none; 
+ 
+} 
+ 
+.completed{ 
+ 
+    text-decoration:line-through; 
+ 
+    opacity:.6; 
+ 
+} 
+/* =========================================== 
+   Routine Tracker 
+   style.css 
+   Part 2 
+=========================================== */ 
+ 
+ 
+/* =============================== 
+   Calendar Header 
+=============================== */ 
+ 
+.calendar-header{ 
+ 
+    display:flex; 
+ 
+    justify-content:space-between; 
+ 
+    align-items:center; 
+ 
+    margin-bottom:20px; 
+ 
+} 
+ 
+.calendar-header h2{ 
+ 
+    font-size:20px; 
+ 
+    color:#ffffff; 
+ 
+    font-weight:600; 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Week Days 
+=============================== */ 
+ 
+#weekdays{ 
+ 
+    display:grid; 
+ 
+    grid-template-columns:repeat(7,1fr); 
+ 
+    gap:6px; 
+ 
+    margin-bottom:10px; 
+ 
+} 
+ 
+#weekdays div{ 
+ 
+    text-align:center; 
+ 
+    font-weight:bold; 
+ 
+    color:#f8f8fa; 
+ 
+    font-size:14px; 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Calendar Grid 
+=============================== */ 
+ 
+#calendar{ 
+ 
+    display:grid; 
+ 
+    grid-template-columns:repeat(7,1fr); 
+ 
+    gap:8px; 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Calendar Cells 
+=============================== */ 
+ 
+.day, 
+.empty{ 
+ 
+    height:45px; 
+ 
+    display:flex; 
+ 
+    justify-content:center; 
+ 
+    align-items:center; 
+ 
+    border-radius:5px; 
+ 
+} 
+ 
+.empty{ 
+ 
+    visibility:hidden; 
+ 
+} 
+ 
+.day{ 
+ 
+    background:#343435; 
+ 
+    cursor:pointer; 
+ 
+    transition:.25s; 
+ 
+    font-weight:600; 
+ 
+} 
+ 
+.day:hover{ 
+ 
+    background:#454546; 
+ 
+    transform:scale(1.05); 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Calendar States 
+=============================== */ 
+ 
+.today{ 
+ 
+    background:#181818; 
+ 
+    color:white; 
+ 
+    font-weight:bold; 
+ 
+} 
+ 
+.selected{ 
+ 
+    border:3px solid #000000; 
+ 
+} 
+ 
+.saved{ 
+ 
+    background:#484b49; 
+ 
+    color:white; 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Progress Card 
+=============================== */ 
+ 
+.progressCard{ 
+ 
+    margin-top:25px; 
+
+    margin-bottom:18px;
+ 
+    background:#2c2c2c; 
+ 
+    border-radius:12px; 
+ 
+    padding:18px; 
+ 
+    box-shadow:0 2px 8px rgba(0,0,0,.08); 
+ 
+} 
+ 
+.progressCard h3{ 
+ 
+    margin-bottom:15px; 
+ 
+    color:#c1c2c4; 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Progress Bar 
+=============================== */ 
+ 
+progress{ 
+ 
+    width:100%; 
+ 
+    height:22px; 
+ 
+} 
+ 
+#progressText{ 
+ 
+    margin-top:10px; 
+ 
+    text-align:center; 
+ 
+    font-weight:bold; 
+ 
+    color:#dbdde0; 
+ 
+} 
+/* =========================================== 
+   Routine Tracker 
+   style.css 
+   Part 3 
+=========================================== */ 
+ 
+ 
+/* =============================== 
+   Task Lists 
+=============================== */ 
+ 
+#objectivesList, 
+#checkpointsList{ 
+ 
+    display:flex; 
+    align-items: center;
+    flex-direction:column; 
+    width: 100%;
+    gap: 7px;
+    min-height: 38px;
+    padding: 10 12px;
+    margin-bottom: 10px;
+    background: #353535;
+    border-radius: 12px;
+    box-sizing: border-box;
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border color 0.2s ease
+    
+ 
+} 
+#objectivesList,
+#checkpointsList:hover{
+    transform:translateY(-2px)
+    border color #050a1d;
+    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+ 
+ 
+/* =============================== 
+   Task Row 
+=============================== */ 
+ 
+.task-row{ 
+ 
+    display:flex; 
+ 
+    align-items:center; 
+ 
+    gap:12px; 
+ 
+    background:#2c2c2c; 
+ 
+    padding:12px 15px; 
+ 
+    border-radius:10px; 
+ 
+    transition:.25s; 
+ 
+}
+.task-row button{
+    margin-right: 8px;
+}
+ 
+.task-row:hover{ 
+ 
+    background:#3b3b3b; 
+ 
+} 
+ 
+.task-row span{ 
+ 
+    flex:1; 
+ 
+    font-size:16px; 
+ 
+    word-break:break-word; 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Checkbox 
+=============================== */ 
+ 
+.task-row input{ 
+    flex: 00 auto;
+    width: 25px;
+    height: 25px;
+    margin: 0 12px 0 2px;
+    cursor:pointer; 
+    accent-color: #3e4d72;
+ 
+} 
+ 
+ 
+/* =============================== 
+   Task Buttons 
+=============================== */ 
+ 
+.task-row button{ 
+ 
+    padding: 7px 12px; 
+    justify-items:right;
+    border-radius:7px; 
+ 
+    font-size:14px; 
+ 
+} 
+
+.task-row text{
+    flex:1;
+    min-width: 0;
+    color: #e9ecf1;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+    word-break: break-word;
+}
+ 
+ 
+/* =============================== 
+   Notes 
+=============================== */ 
+ 
+#notes{ 
+ 
+    width:100%; 
+ 
+    height:220px; 
+ 
+    resize:none; 
+
+    background:#313131;
+ 
+    border:1px solid #ccc; 
+ 
+    border-radius:10px; 
+ 
+    padding:15px; 
+ 
+    font-size:15px; 
+ 
+    line-height:1.6; 
+ 
+    outline:none; 
+ 
+    transition:.25s; 
+ 
+} 
+ 
+#notes:focus{ 
+ 
+    border-color:#000000; 
+ 
+    box-shadow:0 0 8px rgba(52,152,219,.25); 
+ 
+} 
+.notes:text{
+    color:#ffffff;
+} 
+ 
+/* =============================== 
+   Notes Footer 
+=============================== */ 
+ 
+.noteFooter{ 
+ 
+    display:flex; 
+ 
+    justify-content:flex-end; 
+ 
+    margin-top:10px; 
+ 
+    font-size:14px; 
+ 
+    color:#666; 
+ 
+} 
+ 
+#charCount{ 
+ 
+    font-weight:bold; 
+ 
+    color:#f3f5f7; 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Completed Task 
+=============================== */ 
+ 
+.completed{ 
+ 
+    text-decoration:line-through; 
+ 
+    color:#888; 
+ 
+    opacity:.7; 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Empty State 
+=============================== */ 
+ 
+.empty-message{ 
+ 
+    text-align:center;
+    align-items:center; 
+ 
+    color:#888; 
+ 
+    padding:20px; 
+ 
+    font-style:italic; 
+ 
+} 
+/* =========================================== 
+   Routine Tracker 
+   style.css 
+   Part 4 
+=========================================== */ 
+ 
+ 
+/* =============================== 
+   Footer 
+=============================== */ 
+ 
+
+ 
+ 
+/* =============================== 
+   Custom Scrollbar 
+=============================== */ 
+ 
+::-webkit-scrollbar{ 
+ 
+    width:10px; 
+ 
+    height:10px; 
+ 
+} 
+ 
+::-webkit-scrollbar-track{ 
+ 
+    background:#424242; 
+ 
+} 
+ 
+::-webkit-scrollbar-thumb{ 
+ 
+    background:#4b4b4b; 
+ 
+    border-radius:20px; 
+ 
+} 
+ 
+::-webkit-scrollbar-thumb:hover{ 
+ 
+    background:#000000; 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Simple Animations 
+=============================== */ 
+ 
+@keyframes fadeIn{ 
+ 
+    from{ 
+ 
+        opacity:0; 
+ 
+        transform:translateY(8px); 
+ 
+    } 
+ 
+    to{ 
+ 
+        opacity:1; 
+ 
+        transform:translateY(0); 
+ 
+    } 
+ 
+} 
+ 
+.card, 
+.task-row, 
+.day{ 
+ 
+    animation:fadeIn .25s ease; 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Focus Styles 
+=============================== */ 
+ 
+button:focus, 
+textarea:focus, 
+input:focus{ 
+ 
+    outline:2px solid #000000; 
+ 
+    outline-offset:2px; 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Responsive Layout 
+=============================== */ 
+ 
+@media (max-width:1000px){ 
+ 
+    .container{ 
+ 
+        flex-direction:column; 
+ 
+    } 
+ 
+    .sidebar{ 
+ 
+        width:100%; 
+ 
+        border-right:none; 
+ 
+        border-bottom:1px solid #ddd; 
+ 
+    } 
+ 
+    main{ 
+ 
+        padding:18px; 
+ 
+    } 
+ 
+} 
+ 
+@media (max-width:600px){ 
+ 
+    header{ 
+ 
+        flex-direction:column; 
+ 
+        justify-content:center; 
+ 
+        gap:5px; 
+ 
+        height:90px; 
+ 
+        text-align:center; 
+ 
+    } 
+ 
+    .logo{ 
+ 
+        font-size:22px; 
+ 
+    } 
+ 
+    .card{ 
+ 
+        padding:15px; 
+ 
+    } 
+ 
+    .task-row{ 
+ 
+        flex-wrap:wrap; 
+ 
+    } 
+ 
+    button{ 
+ 
+        padding:8px 12px; 
+ 
+        font-size:14px; 
+ 
+    } 
+ 
+} 
+ 
+ 
+/* =============================== 
+   Utility Classes 
+=============================== */ 
+ 
+.text-center{ 
+ 
+    text-align:center; 
+ 
+} 
+ 
+.mt-10{ 
+ 
+    margin-top:10px; 
+ 
+} 
+ 
+.mt-20{ 
+ 
+    margin-top:20px; 
+ 
+} 
+ 
+.mb-10{ 
+ 
+    margin-bottom:10px; 
+ 
+} 
+ 
+.mb-20{ 
+ 
+    margin-bottom:20px; 
+ 
+} 
+ 
+.hidden{ 
+ 
+    display:none !important; 
+ 
+} 
+
+/* =======================================
+   CUSTOM INPUT MODAL
+======================================= */
+
+.modal{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(12, 12, 12, 0.45);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.modal.show{
+
+    display:flex;
+
+}
+
+.modal-content{
+
+    width:420px;
+
+    max-width:90%;
+
+    background:#2b2b2b;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    animation:popup .2s ease;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:scale(.9);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.modal-content h2{
+
+    margin:0 0 20px;
+
+    font-size:24px;
+
+    color:#eee3e3;
+
+}
+
+#modalInput{
+
+    width:100%;
+
+    padding:12px;
+
+    font-size:16px;
+
+    border:2px solid #d9d9d9;
+
+    border-radius:8px;
+
+    outline:none;
+
+    box-sizing:border-box;
+
+    transition:.2s;
+
+}
+
+#modalInput:focus{
+
+    border-color:#000000;
+
+}
+
+.modal-buttons{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+    margin-top:20px;
+
+}
+
+#modalCancel,
+#modalSave{
+
+    border:none;
+
+    padding:10px 22px;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+#modalCancel{
+
+    background:#e0e0e0;
+
+    color:#2b2b2b;
+
+}
+
+#modalCancel:hover{
+
+    background:#cfcfcf;
+
+}
+
+#modalSave{
+
+    background:#000000;
+
+    color:white;
+
+}
+
+#modalSave:hover{
+
+    background:#1b1b1b;
+
+}
+.hidden{
+    display:none;
+}
+
+#abouttext{
+    font-size: 15px;
+    font-weight: bolder;
+    font-style: normal;
+    color:#f3f5f7;
+    margin-top: 70px;
+}
+#pageTitle{
+    font-size: 70px;
+    font-weight: bolder;
+    color: #757575;
+    margin-bottom: 10px;
+}
+
+ 
+#profile{
+    height:200px;
+    width:auto;
+    float:right;
+}

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Improve</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body id="body">
+
+<header>
+
+    <div class="logo">
+        Improve
+
+    </div>
+
+    <div id="todayDate">
+        Loading...
+    </div>
+
+</header>
+
+<div class="container">
+
+    <!-- ========================= -->
+    <!-- SIDEBAR -->
+    <!-- ========================= -->
+
+    <aside id = "sideBar", class="sidebar", style="display:block">
+
+        <div class="calendar-header">
+
+            <button id="prevMonth">
+                ◀
+            </button>
+
+            <h2 id="monthYear"></h2>
+
+            <button id="nextMonth">
+                ▶
+            </button>
+
+        </div>
+
+        <div id="weekdays">
+
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+
+        </div>
+
+        <div id="calendar"></div>
+
+
+        
+
+        <button id="page1",class="button", style="margin-top: 50px; ">
+            About Improve
+        </button>
+
+        <button id="devbtn",class="button", style="margin-top: 50px;">
+            Developers
+        </button>
+        
+
+    </aside>
+
+    
+    <!-- ========================= -->
+    <!-- MAIN -->
+    <!-- ========================= -->
+
+    <main id="mainPage", class="main-page", style="display:block">
+
+
+        <div class="progressCard">
+
+            <h3>Today's Progress</h3>
+
+            <progress
+                id="progressBar"
+                max="100"
+                value="0">
+            </progress>
+
+            <p id="progressText">
+                0%
+            </p>
+
+        </div>
+
+        <!-- OBJECTIVES -->
+
+        
+
+        <section class="card">
+
+            <div class="cardTitle">
+
+                <h2>
+                     Objectives
+                </h2>
+
+                <button
+                    id="addObjective"
+                    type="button">
+
+                    + Add
+
+                </button>
+
+            </div>
+
+            <div id="objectivesList"></div>
+
+        </section>
+
+        <!-- CHECKPOINTS -->
+
+        <section class="card">
+
+            <div class="cardTitle">
+
+                <h2>
+                     Checkpoints
+                </h2>
+
+                <button
+                    id="addCheckpoint"
+                    type="button">
+
+                    + Add
+
+                </button>
+
+            </div>
+
+            <div id="checkpointsList"></div>
+
+        </section>
+
+        <!-- NOTES -->
+
+        <section class="card">
+
+            <div class="cardTitle">
+
+                <h2>
+                     Notes
+                </h2>
+
+            </div>
+
+            <textarea
+
+                id="notes"
+
+                maxlength="1000"
+
+                placeholder="Write today's notes here...">
+
+            </textarea>
+
+            <div class="noteFooter">
+
+                <span id="charCount">
+
+                    0
+
+                </span>
+
+                /1000 Characters
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <main id="about", style="display:none", class="aboutpg">
+
+        <button id="close1", style="margin-bottom: 15px;">
+            ⬅ back
+
+        </button>
+
+        <section class="card">
+            <h2>
+                <img src="D:/Improve/assets/icon.ico" style="width: auto;
+                height: auto;">
+            </h2>
+
+
+        
+        
+            <p class="pageTitle" style="font-size: xx-large;
+            font-weight: bolder;
+            font-style: normal;">
+                About Improve
+            </p>
+        
+
+        
+
+            <p class="abouttext", style="font-size: 15px;
+            font-weight: bold
+            margin-top 50px;">
+                
+Improve is a simple, offline-first desktop productivity and routine-tracking application designed
+to help you stay consistent with your daily goals. It provides a clear calendar-based system for
+tracking completed days, managing objectives and checkpoints, and keeping personal notes
+for individual dates.
+The application is designed to keep your progress stored locally on your computer, allowing
+you to continue using it without depending on an internet connection. The goal of Improve is
+straightforward: reduce unnecessary distractions, make daily progress visible, and turn
+consistency into a habit.
+The project was originally developed under the name Routine Tracker and was later renamed
+to Improve as the project evolved into a broader personal productivity application.
+
+    
+                
+            </p>
+        </section>
+
+        
+        
+    </main>
+
+    <main id="devpage", class="mainPage", style="display:none">
+
+        <button id="cldevbtn", style="margin-bottom: 15px;">
+            ⬅ back
+        </button>
+
+        <section class="card">
+
+            <div>
+               
+
+                <img src="D:/improve/assets/dev.ico", class="profile", style="height: 300px;
+                width:auto; margin-top: 30px; margin-bottom: 30px;">
+
+                <h2 class="pageTitle">
+                    Meet The Developer
+                </h2>
+
+                
+
+                <p class="abouttext">
+                    Improve is developed by Aakash, a student and developer interested in software
+                    development, productivity tools, and building practical applications.
+                    The project is built with a focus on simplicity, reliability, and a clean user experience. Improve
+                    is an ongoing project, with new features and refinements added as the application develops.
+
+
+
+
+                </p>
+
+
+            </div>
+        </section>
+
+    </main>
+
+    
+
+
+</div>
+
+
+
+<!-- ================================= -->
+<!-- CUSTOM INPUT MODAL -->
+<!-- ================================= -->
+
+<div id="inputModal" class="modal">
+
+    <div class="modal-content">
+
+        <h2 id="modalTitle">
+
+            Add Item
+
+        </h2>
+
+        <input
+
+            id="modalInput"
+
+            type="text"
+
+            maxlength="200"
+
+            placeholder="Enter text here..."
+
+            autocomplete="off"
+
+        >
+
+        <div class="modal-buttons">
+
+            <button
+                id="modalCancel"
+                type="button">
+
+                Cancel
+
+            </button>
+
+            <button
+                id="modalSave"
+                type="button">
+
+                Save
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
